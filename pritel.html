@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pozvánka do Apka kvízu</title>
+  <meta name="description" content="Přidej si přítele v Apka kvízu a soutěžte o body za týden.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .code { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 0.15em; color: var(--gold); text-align: center; margin: 8px 0; }
+    .center { text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="hex logo">?</span>
+      <a class="brand" href="index.html">Apka kvíz</a>
+    </header>
+
+    <h1>Pozvánka od přítele</h1>
+    <div class="card gold center">
+      <p class="muted">Kód přítele</p>
+      <div class="code" id="code">······</div>
+      <p><a class="btn" id="open" href="#">Otevřít v aplikaci</a></p>
+      <p class="muted">Nebo otevři Apka kvíz → Profil → Přátelé → Přidat přítele a kód zadej ručně.</p>
+    </div>
+    <p class="center"><a href="index.html">Co je Apka kvíz?</a></p>
+
+    <footer>
+      <a href="soukromi.html">Zásady ochrany soukromí</a>
+      <p>© TK Studio</p>
+    </footer>
+  </div>
+  <script>
+    // Kód je za # (…/pritel.html#ABC234), na server se tedy vůbec neposílá.
+    (function () {
+      var raw = (location.hash || '').replace('#', '').toUpperCase();
+      var code = /^[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{6}$/.test(raw) ? raw : null;
+      var open = document.getElementById('open');
+      if (code) {
+        document.getElementById('code').textContent = code;
+        open.href = 'apkakviz://pritel/' + code;
+      } else {
+        open.style.display = 'none';
+      }
+    })();
+  </script>
+</body>
+</html>

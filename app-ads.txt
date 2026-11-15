@@ -1,0 +1,2 @@
+# app-ads.txt pro Apka kvíz (TK Studio), musí ležet v kořeni webu uvedeného v Google Play.
+google.com, pub-1731193724177230, DIRECT, f08c47fec0942fa0

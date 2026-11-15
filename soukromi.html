@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ochrana soukromí</title>
+  <meta name="description" content="Zásady ochrany soukromí aplikace Apka kvíz (TK Studio).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="hex logo">?</span>
+      <a class="brand" href="index.html">Apka kvíz</a>
+    </header>
+
+    <h1>Zásady ochrany soukromí</h1>
+    <p class="muted">Platné od 15. 11. 2026. Týkají se aplikace Apka kvíz pro Android (cz.tkdigital.kviz).</p>
+
+    <h2>Kdo data zpracovává</h2>
+    <p>Správcem je <strong>TK Studio</strong>. Kontakt pro jakékoli dotazy k osobním údajům: <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>.</p>
+
+    <h2>Stručně</h2>
+    <div class="card gold">
+      <ul>
+        <li>Hrát jde bez registrace. Postup, statistiky, odznaky, přezdívka a avatar jsou uložené ve tvém telefonu.</li>
+        <li>Když se přihlásíš přes Google kvůli přátelům, uloží se na náš server ve Firebase veřejný profil (přezdívka, avatar, level, XP, série, body za týden, kód přítele) a seznam přátel. Vidí ho jen přihlášení hráči.</li>
+        <li>Používáme Firebase Analytics (anonymní statistiky používání) a reklamy Google AdMob.</li>
+        <li>Personalizované reklamy jen s tvým souhlasem. Souhlas můžeš kdykoli změnit v Nastavení.</li>
+        <li>Předplatné VIP platíš přes Google Play, platební údaje nevidíme.</li>
+        <li>Data neprodáváme.</li>
+      </ul>
+    </div>
+
+    <h2>Co se ukládá a proč</h2>
+    <div class="table-scroll">
+      <table>
+        <tr><th>Data</th><th>Kde</th><th>Proč</th></tr>
+        <tr>
+          <td>Postup ve hře (hvězdy, body, level, denní série), historie odehraných kol, odznaky</td>
+          <td>Jen v telefonu</td>
+          <td>Aby hra pamatovala, kde jsi skončil(a). Bez internetu funguje stejně.</td>
+        </tr>
+        <tr>
+          <td>Přezdívka a avatar</td>
+          <td>Jen v telefonu</td>
+          <td>Zobrazení v Profilu a na kartě výsledku, kterou se sám/sama rozhodneš sdílet.</td>
+        </tr>
+        <tr>
+          <td>Jen po přihlášení přes Google: identifikátor účtu (Firebase UID), e-mail a jméno z účtu Google</td>
+          <td>Google Firebase Authentication</td>
+          <td>Přihlášení kvůli přátelům a žebříčku. E-mail ani jméno z účtu se ostatním hráčům neukazují.</td>
+        </tr>
+        <tr>
+          <td>Jen po přihlášení: veřejný profil (přezdívka, znak a barva avatara, level, XP, denní série, body za aktuální týden, kód přítele, zda máš VIP)</td>
+          <td>Google Cloud Firestore (EU)</td>
+          <td>Přátelé a týdenní žebříček přátel. Číst ho mohou přihlášení hráči aplikace, seznam všech hráčů nejde stáhnout.</td>
+        </tr>
+        <tr>
+          <td>Jen po přihlášení: skóre týdenního kvízu (přezdívka, avatar, body po dnech a součet za týden)</td>
+          <td>Google Cloud Firestore</td>
+          <td>Týdenní žebříček. Vidí ho přihlášení hráči (top 100 a pořadí).</td>
+        </tr>
+        <tr>
+          <td>Jen po přihlášení: seznam přátel a žádostí o přátelství</td>
+          <td>Google Cloud Firestore</td>
+          <td>Přátelé. Vidíš ho jen ty; tvůj přítel vidí svou stranu.</td>
+        </tr>
+        <tr>
+          <td>Nastavení (vibrace, zvuky, připomínka a její čas)</td>
+          <td>Jen v telefonu</td>
+          <td>Aby aplikace fungovala podle tebe.</td>
+        </tr>
+        <tr>
+          <td>Nahlášené chyby v otázkách (ID otázky, důvod, nepovinná poznámka, verze aplikace)</td>
+          <td>V telefonu; později se odešlou na náš server ve Firebase</td>
+          <td>Opravy otázek. Do poznámky prosím nepiš osobní údaje.</td>
+        </tr>
+        <tr>
+          <td>Údaje o používání aplikace a zařízení (např. otevření obrazovek, model telefonu, verze systému, přibližná země, identifikátor instance aplikace)</td>
+          <td>Google Firebase Analytics</td>
+          <td>Statistiky, abychom věděli, co hráče baví a co zlepšit. Oprávněný zájem.</td>
+        </tr>
+        <tr>
+          <td>Reklamní ID zařízení, IP adresa, informace o zařízení a o zobrazení reklam</td>
+          <td>Google AdMob</td>
+          <td>Zobrazení reklam, které hru financují. Personalizace jen se souhlasem.</td>
+        </tr>
+        <tr>
+          <td>Informace o předplatném (stav, identifikátor nákupu)</td>
+          <td>Google Play, potvrzení v telefonu</td>
+          <td>Plnění smlouvy: zapnutí VIP a obnovení nákupu.</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Reklamy a souhlas</h2>
+    <p>Reklamy zobrazuje Google AdMob. Při prvním spuštění se v EU zobrazí formulář souhlasu (Google User Messaging Platform). Podle tvé volby se reklamy zobrazují personalizované, nebo nepersonalizované. Volbu změníš v aplikaci v <em>Nastavení → Souhlas s reklamami</em>. Reklamní ID můžeš také resetovat nebo smazat v nastavení telefonu (Google → Reklamy).</p>
+    <p>Na obrazovce s otázkou reklamy nikdy nejsou. Hráči s VIP reklamy nevidí vůbec.</p>
+    <p>Jak Google data z reklam používá: <a href="https://policies.google.com/technologies/partner-sites?hl=cs">policies.google.com/technologies/partner-sites</a>.</p>
+
+    <h2>Předplatné VIP</h2>
+    <p>Platbu zpracovává Google Play podle svých podmínek. Od Google dostaneme jen informaci, že je předplatné aktivní, a identifikátor nákupu, který aplikace uloží v telefonu. Číslo karty ani jiné platební údaje k nám nikdy nejdou.</p>
+
+    <h2>Notifikace</h2>
+    <p>Denní připomínku plánuje přímo telefon. Žádný server ti zprávy neposílá a pro připomínku se nic neodesílá.</p>
+
+    <h2>Přátelé a přihlášení</h2>
+    <p>Přihlášení je dobrovolné a hra funguje i bez něj. Po přihlášení se tvůj veřejný profil zapisuje do Firestore, kdykoli dohraješ kolo nebo změníš přezdívku či avatar (bez internetu později). Přítele přidáš kódem nebo odkazem <em>…/pritel.html#KÓD</em>; kód je za znakem #, takže se na web vůbec neposílá.</p>
+    <p>Odhlásit se můžeš v Profilu v sekci Přátelé. Smazání účtu a veřejného profilu na serveru si zatím vyžádej e-mailem na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a>, smažeme ho do 30 dnů.</p>
+
+    <h2>Komu data předáváme</h2>
+    <p>Jen poskytovatelům služeb, které aplikace používá: Google Ireland Limited a Google LLC (Firebase, AdMob, Google Play). Google může data zpracovávat i mimo EU na základě standardních smluvních doložek. <strong>Žádná data neprodáváme</strong> a nepředáváme je dalším firmám.</p>
+
+    <h2>Jak dlouho data uchováváme</h2>
+    <p>Data v telefonu zůstávají, dokud aplikaci neodinstaluješ nebo nevymažeš její data. Veřejný profil a seznam přátel na serveru uchováváme, dokud nepožádáš o smazání. Firebase Analytics uchovává data 14 měsíců. Data o reklamách uchovává Google podle svých zásad.</p>
+
+    <h2>Děti</h2>
+    <p>Aplikace není určená dětem mladším 15 let.</p>
+
+    <h2>Tvoje práva</h2>
+    <p>Podle GDPR máš právo na přístup k údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Souhlas s personalizovanými reklamami můžeš kdykoli odvolat v Nastavení. Napiš nám na <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>. Stížnost můžeš podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz">uoou.gov.cz</a>).</p>
+
+    <h2>Změny</h2>
+    <p>Když aplikace začne dělat s daty něco nového (například celostátní žebříček), tyto zásady upravíme a datum nahoře změníme.</p>
+
+    <footer>
+      <a href="index.html">Apka kvíz</a>
+      <a href="podminky.html">Podmínky předplatného</a>
+      <p>© TK Studio</p>
+    </footer>
+  </div>
+</body>
+</html>
