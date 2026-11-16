@@ -18,7 +18,7 @@
     </header>
 
     <h1>Zásady ochrany soukromí</h1>
-    <p class="muted">Platné od 15. 11. 2026. Týkají se aplikace Apka kvíz pro Android (cz.tkdigital.kviz).</p>
+    <p class="muted">Platné od 16. 11. 2026. Týkají se aplikace Apka kvíz pro Android (cz.tkdigital.kviz).</p>
 
     <h2>Kdo data zpracovává</h2>
     <p>Správcem je <strong>TK Studio</strong>. Kontakt pro jakékoli dotazy k osobním údajům: <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>.</p>
@@ -28,7 +28,7 @@
       <ul>
         <li>Hrát jde bez registrace. Postup, statistiky, odznaky, přezdívka a avatar jsou uložené ve tvém telefonu.</li>
         <li>Když se přihlásíš přes Google kvůli přátelům, uloží se na náš server ve Firebase veřejný profil (přezdívka, avatar, level, XP, série, body za týden, kód přítele) a seznam přátel. Vidí ho jen přihlášení hráči.</li>
-        <li>Používáme Firebase Analytics (anonymní statistiky používání) a reklamy Google AdMob.</li>
+        <li>Používáme Firebase Analytics (anonymní statistiky používání), Firebase Crashlytics (hlášení pádů) a reklamy Google AdMob.</li>
         <li>Personalizované reklamy jen s tvým souhlasem. Souhlas můžeš kdykoli změnit v Nastavení.</li>
         <li>Předplatné VIP platíš přes Google Play, platební údaje nevidíme.</li>
         <li>Data neprodáváme.</li>
@@ -85,6 +85,11 @@
           <td>Statistiky, abychom věděli, co hráče baví a co zlepšit. Oprávněný zájem.</td>
         </tr>
         <tr>
+          <td>Diagnostika pádů: záznam chyby (stack trace), model telefonu, verze systému a aplikace, identifikátor instalace</td>
+          <td>Google Firebase Crashlytics</td>
+          <td>Oprava chyb a pádů aplikace. Bez přezdívky, e-mailu a obsahu hry. Uchovává se 90 dní. Oprávněný zájem.</td>
+        </tr>
+        <tr>
           <td>Reklamní ID zařízení, IP adresa, informace o zařízení a o zobrazení reklam</td>
           <td>Google AdMob</td>
           <td>Zobrazení reklam, které hru financují. Personalizace jen se souhlasem.</td>
@@ -110,7 +115,7 @@
 
     <h2>Přátelé a přihlášení</h2>
     <p>Přihlášení je dobrovolné a hra funguje i bez něj. Po přihlášení se tvůj veřejný profil zapisuje do Firestore, kdykoli dohraješ kolo nebo změníš přezdívku či avatar (bez internetu později). Přítele přidáš kódem nebo odkazem <em>…/pritel.html#KÓD</em>; kód je za znakem #, takže se na web vůbec neposílá.</p>
-    <p>Odhlásit se můžeš v Profilu v sekci Přátelé. Smazání účtu a veřejného profilu na serveru si zatím vyžádej e-mailem na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a>, smažeme ho do 30 dnů.</p>
+    <p>Odhlásit se můžeš v Profilu v sekci Přátelé. Účet se všemi daty na serveru smažeš v aplikaci v <em>Nastavení → Smazat účet</em>, nebo e-mailem na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a> (do 30 dnů). Podrobně: <a href="smazani-uctu.html">Smazání účtu a dat</a>.</p>
 
     <h2>Komu data předáváme</h2>
     <p>Jen poskytovatelům služeb, které aplikace používá: Google Ireland Limited a Google LLC (Firebase, AdMob, Google Play). Google může data zpracovávat i mimo EU na základě standardních smluvních doložek. <strong>Žádná data neprodáváme</strong> a nepředáváme je dalším firmám.</p>
@@ -119,7 +124,7 @@
     <p>Data v telefonu zůstávají, dokud aplikaci neodinstaluješ nebo nevymažeš její data. Veřejný profil a seznam přátel na serveru uchováváme, dokud nepožádáš o smazání. Firebase Analytics uchovává data 14 měsíců. Data o reklamách uchovává Google podle svých zásad.</p>
 
     <h2>Děti</h2>
-    <p>Aplikace není určená dětem mladším 15 let.</p>
+    <p>Aplikace je určená hráčům od 16 let.</p>
 
     <h2>Tvoje práva</h2>
     <p>Podle GDPR máš právo na přístup k údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Souhlas s personalizovanými reklamami můžeš kdykoli odvolat v Nastavení. Napiš nám na <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>. Stížnost můžeš podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz">uoou.gov.cz</a>).</p>
@@ -130,6 +135,7 @@
     <footer>
       <a href="index.html">Apka kvíz</a>
       <a href="podminky.html">Podmínky předplatného</a>
+      <a href="smazani-uctu.html">Smazání účtu</a>
       <p>© TK Studio</p>
     </footer>
   </div>

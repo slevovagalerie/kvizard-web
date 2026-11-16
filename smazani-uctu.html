@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smazání účtu</title>
+  <meta name="description" content="Jak smazat účet a data v aplikaci Kvízard (Apka kvíz) od TK Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="hex logo">?</span>
+      <a class="brand" href="index.html">Apka kvíz</a>
+    </header>
+
+    <h1>Smazání účtu a dat</h1>
+    <p class="muted">Aplikace Kvízard (Apka kvíz) pro Android, cz.tkdigital.kviz. Vývojář: <strong>TK Studio</strong>, kontakt <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a>.</p>
+
+    <h2>Jak účet smazat</h2>
+    <div class="card gold">
+      <ol>
+        <li><strong>V aplikaci:</strong> Nastavení → Smazat účet → potvrdit. Data na serveru se smažou hned a aplikace tě odhlásí. V dialogu si můžeš vybrat, jestli ti v telefonu zůstane postup ve hře.</li>
+        <li><strong>E-mailem:</strong> napiš z e-mailu, kterým se do aplikace přihlašuješ přes Google, na <a href="mailto:ahoj@kvizard.cz?subject=Smaz%C3%A1n%C3%AD%20%C3%BA%C4%8Dtu">ahoj@kvizard.cz</a> s předmětem <em>Smazání účtu</em>. Účet a data smažeme nejpozději do 30 dnů a pošleme potvrzení.</li>
+      </ol>
+    </div>
+
+    <h2>Co se smaže</h2>
+    <ul>
+      <li>účet pro přihlášení (Firebase Authentication),</li>
+      <li>veřejný profil: přezdívka, avatar, level, body, série, kód přítele,</li>
+      <li>seznam přátel a žádostí o přátelství,</li>
+      <li>skóre v žebříčcích (Top kvíz, týdenní žebříček),</li>
+      <li>ligy a duely, pokud jsi je hrál(a).</li>
+    </ul>
+    <p>Při smazání v aplikaci proběhne smazání hned, při žádosti e-mailem do 30 dnů.</p>
+
+    <h2>Co zůstane</h2>
+    <ul>
+      <li><strong>Předplatné VIP</strong> vede Google Play. Smazáním účtu se nezruší, zrušíš ho v Google Play → Platby a předplatná.</li>
+      <li><strong>Anonymní statistiky používání</strong> (Firebase Analytics) a diagnostika pádů (Firebase Crashlytics) nejsou spojené s tvým účtem. Google je uchovává nejvýš 14 měsíců (Analytics), resp. 90 dní (Crashlytics).</li>
+      <li><strong>Anonymní statistiky odpovědí</strong> (kolik hráčů na otázku odpovědělo správně) neobsahují žádný identifikátor, proto je nejde přiřadit ani smazat.</li>
+      <li><strong>Data v telefonu</strong> (postup, nastavení) smaže odinstalace aplikace nebo vymazání jejích dat v nastavení telefonu.</li>
+    </ul>
+
+    <h2>Smazat jen část dat</h2>
+    <p>Účet si můžeš nechat a smazat jen něco:</p>
+    <ul>
+      <li>přítele odebereš v Profilu v sekci Přátelé,</li>
+      <li>přezdívku a avatar změníš v Profilu (na serveru se přepíšou),</li>
+      <li>odhlášením se do žebříčků a lig přestane cokoli zapisovat,</li>
+      <li>o smazání jiných konkrétních dat (např. skóre) napiš na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a>, vyřídíme do 30 dnů.</li>
+    </ul>
+
+    <footer>
+      <a href="index.html">Apka kvíz</a>
+      <a href="soukromi.html">Zásady ochrany soukromí</a>
+      <a href="podminky.html">Podmínky předplatného</a>
+      <p>© TK Studio</p>
+    </footer>
+  </div>
+</body>
+</html>
