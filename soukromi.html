@@ -18,7 +18,7 @@
     </header>
 
     <h1>Zásady ochrany soukromí</h1>
-    <p class="muted">Platné od 16. 11. 2026. Týkají se aplikace Apka kvíz pro Android (cz.tkdigital.kviz).</p>
+    <p class="muted">Platné od 18. 11. 2026. Týkají se aplikace Apka kvíz pro Android (cz.tkdigital.kviz).</p>
 
     <h2>Kdo data zpracovává</h2>
     <p>Správcem je <strong>TK Studio</strong>. Kontakt pro jakékoli dotazy k osobním údajům: <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>.</p>
@@ -30,7 +30,8 @@
         <li>Když se přihlásíš přes Google kvůli přátelům, uloží se na náš server ve Firebase veřejný profil (přezdívka, avatar, level, XP, série, body za týden, kód přítele) a seznam přátel. Vidí ho jen přihlášení hráči.</li>
         <li>Používáme Firebase Analytics (anonymní statistiky používání), Firebase Crashlytics (hlášení pádů) a reklamy Google AdMob.</li>
         <li>Personalizované reklamy jen s tvým souhlasem. Souhlas můžeš kdykoli změnit v Nastavení.</li>
-        <li>Předplatné VIP platíš přes Google Play, platební údaje nevidíme.</li>
+        <li>Předplatné VIP, zlaťáky a sezónní sady platíš přes Google Play, platební údaje nevidíme.</li>
+        <li>Profilová fotka je dobrovolná. Před zveřejněním ji automaticky kontroluje Google Cloud Vision a smazat ji můžeš kdykoli.</li>
         <li>Data neprodáváme.</li>
       </ul>
     </div>
@@ -110,8 +111,29 @@
     <h2>Předplatné VIP</h2>
     <p>Platbu zpracovává Google Play podle svých podmínek. Od Google dostaneme jen informaci, že je předplatné aktivní, a identifikátor nákupu, který aplikace uloží v telefonu. Číslo karty ani jiné platební údaje k nám nikdy nejdou.</p>
 
+    <h2>Zlaťáky a nákupy v Obchodě</h2>
+    <p>Zlaťáky, nákupy v Obchodě a vlastněné položky (klobouky, hůlky, rámečky, tituly) jsou u přihlášeného hráče uložené na našem serveru ve Firebase, aby nešly podvrhnout a nezmizely po přeinstalaci. Při nákupu přes Google Play pošle aplikace na náš server identifikátor nákupu (purchase token) a server ho ověří u Google Play. K nákupu se připojí zahashovaný identifikátor účtu, ať nákup nejde použít na cizím účtu. Údaje o platební kartě k nám nikdy nejdou. Když Google platbu vrátí, server připsané zlaťáky odečte.</p>
+
+    <h2>Profilová fotka</h2>
+    <p><strong>Je dobrovolná.</strong> Můžeš si nahrát fotku z galerie, použít fotku ze svého účtu Google, nebo nechat výchozí avatar.</p>
+    <ul>
+      <li><strong>Co se nesmí nahrávat:</strong> nahota a sexuální obsah, násilí, nenávistné nebo urážlivé symboly a texty, cizí osoby bez jejich souhlasu, osobní údaje (telefon, adresa) a nic, co porušuje autorská práva. Doporučujeme nenahrávat fotky dětí.</li>
+      <li><strong>Úprava:</strong> aplikace fotku ořízne do šestiúhelníku, zmenší na nejvýš 512 px a uloží ve formátu WebP. Původní fotka z telefonu se nikam neposílá.</li>
+      <li><strong>Kde je uložena:</strong> ve Firebase Storage (Google Cloud, EU, region europe-central2) ve složce tvého účtu.</li>
+      <li><strong>Kontrola:</strong> po nahrání ji automaticky zkontroluje služba Google Cloud Vision (rozpoznání nevhodného obsahu). Dokud kontrola neproběhne, ostatní vidí výchozí avatar. Fotku, která neprojde, hned smažeme a aplikace ti to oznámí.</li>
+      <li><strong>Kdo ji vidí:</strong> schválenou fotku vidí přihlášení hráči v žebříčcích a u přátel.</li>
+      <li><strong>Nahlášení:</strong> u hráče v žebříčku jde nahlásit fotku nebo přezdívku. Po nahlášení od 3 různých hráčů se fotka i přezdívka skryjí, dokud profil nezkontrolujeme. Nahlášení ukládáme jen do vyřízení.</li>
+      <li><strong>Jak ji smazat:</strong> v aplikaci v <em>Profil → klepni na avatar → Výchozí avatar (smazat fotku)</em>. Fotka se smaže i se smazáním účtu.</li>
+    </ul>
+
+    <h2>Záznamy odehraných kol</h2>
+    <p>U přihlášeného hráče ukládá náš server ve Firebase záznam každého kola, které má vliv na zlaťáky nebo žebříčky: u kola levelu podtéma a level, počet správných odpovědí, počet hvězd, body, ligové body, počet rychlých odpovědí, nejdelší sérii, počet použitých žolíků, den a čas odehrání; u Top kvízu tvoje odpovědi a časy jednotlivých otázek. Podle nich server ověřuje hvězdy, denní úkoly, Top kvíz a ligy, aby nešly podvrhnout. Záznamy jsou vázané na tvůj účet, nejsou veřejné (vidíš jen výsledky v žebříčcích) a smažou se se smazáním účtu. Odmítnuté kolo (například příliš rychlé nebo příliš mnoho kol za hodinu) se zapíše do provozního logu bez odpovědí, aby šlo odhalit podvody.</p>
+
+    <h2>Statistiky odpovědí</h2>
+    <p>Abychom mohli ladit obtížnost otázek, aplikace po dohraném kole (u přihlášeného hráče) anonymně odešle, které otázky v kole byly, zda byly zodpovězeny správně a jak dlouho odpověď trvala, spolu s jazykem, tématem a levelem. Záznam neobsahuje tvůj účet, přezdívku ani jiné osobní údaje a nelze ho s tebou spojit. Jednotlivé záznamy se po sečtení do souhrnných čísel u otázek nejpozději do 30 dnů mažou. Totéž platí pro nahlášení chybné otázky: odešle se jen otázka a důvod, bez poznámky. Které otázky jsi už viděl, si pamatuje jen telefon, aby ti hra dávala nové.</p>
+
     <h2>Notifikace</h2>
-    <p>Denní připomínku plánuje přímo telefon. Žádný server ti zprávy neposílá a pro připomínku se nic neodesílá.</p>
+    <p>Denní připomínku (nejvýš jednu denně mezi 18. a 20. hodinou) plánuje přímo telefon. Žádný server ti zprávy neposílá a pro připomínku se nic neodesílá. O oprávnění k notifikacím aplikace požádá až od druhého dne hraní; vypnout je jde v Nastavení.</p>
 
     <h2>Přátelé a přihlášení</h2>
     <p>Přihlášení je dobrovolné a hra funguje i bez něj. Po přihlášení se tvůj veřejný profil zapisuje do Firestore, kdykoli dohraješ kolo nebo změníš přezdívku či avatar (bez internetu později). Přítele přidáš kódem nebo odkazem <em>…/pritel.html#KÓD</em>; kód je za znakem #, takže se na web vůbec neposílá.</p>
@@ -121,7 +143,7 @@
     <p>Jen poskytovatelům služeb, které aplikace používá: Google Ireland Limited a Google LLC (Firebase, AdMob, Google Play). Google může data zpracovávat i mimo EU na základě standardních smluvních doložek. <strong>Žádná data neprodáváme</strong> a nepředáváme je dalším firmám.</p>
 
     <h2>Jak dlouho data uchováváme</h2>
-    <p>Data v telefonu zůstávají, dokud aplikaci neodinstaluješ nebo nevymažeš její data. Veřejný profil a seznam přátel na serveru uchováváme, dokud nepožádáš o smazání. Firebase Analytics uchovává data 14 měsíců. Data o reklamách uchovává Google podle svých zásad.</p>
+    <p>Data v telefonu zůstávají, dokud aplikaci neodinstaluješ nebo nevymažeš její data. Veřejný profil, profilovou fotku, zlaťáky, vlastněné položky, záznamy odehraných kol a seznam přátel na serveru uchováváme, dokud nepožádáš o smazání. Provozní logy (včetně odmítnutých kol) uchovává Google Cloud Logging 30 dní. Záznamy o nákupech (identifikátor nákupu a co se připsalo) uchováváme kvůli vrácení plateb a účetnictví i po smazání účtu, ale bez vazby na tvůj účet. Anonymní statistiky odpovědí se mažou do 30 dnů (zůstanou jen souhrnná čísla u otázek). Firebase Analytics uchovává data 14 měsíců. Data o reklamách uchovává Google podle svých zásad.</p>
 
     <h2>Děti</h2>
     <p>Aplikace je určená hráčům od 16 let.</p>
