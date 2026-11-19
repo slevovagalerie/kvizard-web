@@ -32,7 +32,7 @@
         <li>Personalizované reklamy jen s tvým souhlasem. Souhlas můžeš kdykoli změnit v Nastavení.</li>
         <li>Předplatné VIP, zlaťáky a sezónní sady platíš přes Google Play, platební údaje nevidíme.</li>
         <li>Profilová fotka je dobrovolná. Před zveřejněním ji automaticky kontroluje Google Cloud Vision a smazat ji můžeš kdykoli.</li>
-        <li>Aplikace má sekci Dětské kvízy bez reklam. Mladším hráčům omezujeme reklamy a veřejný profil podle věku (viz Děti, věk hráče a reklamy).</li>
+        <li>Aplikace je určená hráčům od 16 let. Mladším hráčům omezujeme reklamy a veřejný profil podle věku (viz Děti a věk hráče).</li>
         <li>Data neprodáváme.</li>
       </ul>
     </div>
@@ -146,15 +146,10 @@
     <h2>Jak dlouho data uchováváme</h2>
     <p>Data v telefonu zůstávají, dokud aplikaci neodinstaluješ nebo nevymažeš její data. Veřejný profil, profilovou fotku, zlaťáky, vlastněné položky, záznamy odehraných kol a seznam přátel na serveru uchováváme, dokud nepožádáš o smazání. Provozní logy (včetně odmítnutých kol) uchovává Google Cloud Logging 30 dní. Záznamy o nákupech (identifikátor nákupu a co se připsalo) uchováváme kvůli vrácení plateb a účetnictví i po smazání účtu, ale bez vazby na tvůj účet. Anonymní statistiky odpovědí se mažou do 30 dnů (zůstanou jen souhrnná čísla u otázek). Firebase Analytics uchovává data 14 měsíců. Data o reklamách uchovává Google podle svých zásad.</p>
 
-    <h2>Děti, věk hráče a reklamy</h2>
-    <p>Aplikace je určená hráčům všech věkových skupin a obsahuje samostatnou sekci <strong>Dětské kvízy</strong> pro děti od 6 do 12 let. Při prvním spuštění se aplikace zeptá na věk hráče. Zadává se jen číslo, nikoli datum narození. Věk je uložen pouze v zařízení: neodesílá se nám, do analytických nástrojů ani do zálohy zařízení. Změnit ho lze jen v nastavení pro rodiče, chráněném jednoduchou úlohou pro dospělé. Dokud věk není zadaný, zacházíme s hráčem jako s dítětem.</p>
-    <ul>
-      <li><strong>Sekce Dětské kvízy:</strong> nezobrazují se v ní žádné reklamy. Nejsou v ní žebříčky, přezdívky ani sdílení výsledků; hvězdičky a odznaky se ukládají jen v zařízení.</li>
-      <li><strong>Hráči mladší 13 let:</strong> i mimo dětskou sekci vidí jen reklamní proužky (bannery) určené dětem, s obsahem vhodným pro všechny věkové kategorie a bez personalizace. Reklamy přes celou obrazovku ani videa s odměnou se nezobrazují. Každý nákup lze dokončit až po vyřešení úlohy pro dospělé.</li>
-      <li><strong>Hráči mladší 15 let:</strong> všechny reklamy jsou nepersonalizované a Firebase Analytics u nich nepoužívá údaje k reklamním účelům. V žebříčcích a u přátel se místo přezdívky zobrazuje „Hráč“ s výchozím avatarem, bez profilové fotky a doplňků vzhledu; dříve zveřejněná profilová fotka se odstraní a novou nelze nahrát. U přihlášeného hráče si proto ve veřejném profilu ukládáme jen informaci, že se má zobrazovat v této neutrální podobě. Samotný věk neukládáme.</li>
-      <li><strong>Všichni hráči:</strong> analytické nástroje neshromažďují reklamní identifikátor zařízení. V EU a EHP se ukládání analytických a reklamních údajů řídí volbou ve formuláři souhlasu podle GDPR; dokud hráč souhlas neudělí, je ukládání vypnuté. Personalizované reklamy může souhlasem povolit jen hráč od 15 let.</li>
-    </ul>
-    <p>Reklamy zprostředkovává Google AdMob v souladu se zásadami Google Play pro rodiny. Pokud se domníváte, že nám dítě poskytlo osobní údaje, napište na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a> a údaje odstraníme.</p>
+    <h2>Děti a věk hráče</h2>
+    <p>Aplikace je určená hráčům <strong>od 16 let</strong> a není určena dětem. Při prvním spuštění se aplikace zeptá na věk hráče (jen číslo, nikoli datum narození). Věk je uložen pouze v zařízení: neodesílá se nám, do analytických nástrojů ani do zálohy zařízení. Dokud věk není zadaný, zacházíme s hráčem jako s mladším hráčem.</p>
+    <p>Pokud hráč zadá věk nižší než 15 let, aplikace mu zobrazuje jen nepersonalizované reklamy, Firebase Analytics u něj nepoužívá údaje k reklamním účelům a v žebříčcích a u přátel se místo přezdívky a profilové fotky zobrazuje „Hráč“ s výchozím avatarem. Pod 13 let se navíc zobrazují jen reklamy vhodné pro všechny věkové kategorie a nákupy jsou chráněné úlohou pro dospělé.</p>
+    <p>Analytické nástroje u žádného hráče neshromažďují reklamní identifikátor zařízení. Pokud se domníváte, že nám dítě poskytlo osobní údaje, napište na <a href="mailto:ahoj@kvizard.cz">ahoj@kvizard.cz</a> a údaje odstraníme.</p>
 
     <h2>Tvoje práva</h2>
     <p>Podle GDPR máš právo na přístup k údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Souhlas s personalizovanými reklamami můžeš kdykoli odvolat v Nastavení. Napiš nám na <a href="mailto:ahoj@kvizard.cz"><strong>ahoj@kvizard.cz</strong></a>. Stížnost můžeš podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz">uoou.gov.cz</a>).</p>
